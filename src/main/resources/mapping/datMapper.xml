@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.datMapper">
+  <resultMap id="BaseResultMap" type="com.entity.dat">
+    <result column="infohash" jdbcType="VARCHAR" property="infohash" />
+    <result column="size" jdbcType="VARCHAR" property="size" />
+  </resultMap>
+
+  <select id="datselect" resultType="com.entity.dat">
+    select * from dat where infohash = #{infohash}
+  </select>
+  <select id="datselectAll" resultType="com.entity.dat">
+    select * from dat
+  </select>
+  <select id="datselectpage" resultType="com.entity.dat">
+    select * from dat limit #{page},100
+  </select>
+</mapper>

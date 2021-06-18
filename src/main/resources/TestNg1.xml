@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--测试运行以及输出测试报告-->
+<suite name="我自己的接口测试套件">
+    <test name="这些是测试模块">
+        <classes>
+            <class name="com.atgenghx.ms_interface.msplay">
+                <!--运行的方法-->
+                <methods>
+                    <include name="test"></include>
+                    <include name="test2"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--监听器  测试报告-->
+    <listeners>
+        <!--<listener class-name="report.ExtentTestNGIReporterListener"></listener>-->
+        <listener class-name="com.atgenghx.mediautil.ZTestReport"></listener>
+    </listeners>
+</suite>
